@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Modern Full Stack Developer Portfolio Website with smooth animations, glowing effects and responsive design.">
+    <meta name="keywords" content="Portfolio, Full Stack Developer, Web Developer, Cyber Security">
+    <meta name="author" content="Arman Hasan">
+
+    <title>Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #050816;
+            --glass: rgba(255, 255, 255, 0.05);
+            --white: #ffffff;
+            --text: rgba(255, 255, 255, 0.75);
+
+            --gradient:
+                linear-gradient(135deg,
+                    #00ff88,
+                    #00c3ff,
+                    #9d00ff);
+
+            --gradient2:
+                linear-gradient(135deg,
+                    rgba(0, 255, 136, 0.2),
+                    rgba(0, 195, 255, 0.2),
+                    rgba(157, 0, 255, 0.2));
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            overflow-x: hidden;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #00ff88;
+            filter: blur(180px);
+            top: -150px;
+            left: -150px;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #9d00ff;
+            filter: blur(180px);
+            bottom: -150px;
+            right: -150px;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        /* HEADER */
+
+        header {
+            width: 100%;
+            height: 85px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(15px);
+            background: rgba(0, 0, 0, 0.25);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            z-index: 999;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 40px;
+            transition: 0.4s;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            background: var(--gradient);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-left {
+            flex: 1;
+            animation: fadeUp 1s ease;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 50px;
+            background: var(--gradient2);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 25px;
+            color: #00ff88;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: 75px;
+            line-height: 90px;
+            font-weight: 800;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text);
+            margin: 25px 0;
+            line-height: 30px;
+            font-size: 16px;
+            max-width: 650px;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            transition: 0.4s;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.03);
+        }
+
+        .hero-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .profile-card {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            padding: 8px;
+            background: var(--gradient);
+            box-shadow:
+                0 0 50px rgba(0, 255, 136, 0.5),
+                0 0 80px rgba(157, 0, 255, 0.3);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-image: url("photo.png");
+            background-size: cover;
+            background-position: center;
+            border: 8px solid #050816;
+        }
+
+        /* CARDS */
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            border-radius: 30px;
+            padding: 40px;
+            transition: 0.5s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow:
+                0 0 30px rgba(0, 255, 136, 0.15),
+                0 0 60px rgba(157, 0, 255, 0.12);
+        }
+
+        .section-title {
+            font-size: 50px;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .section-title span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-text {
+            color: var(--text);
+            line-height: 32px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-box {
+            padding: 35px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: 0.4s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+        }
+
+        .skill-box i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-box h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .skill-box p {
+            color: var(--text);
+            line-height: 28px;
+        }
+
+        /* PROJECTS */
+
+        .project-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image {
+            height: 220px;
+            border-radius: 20px;
+            background: var(--gradient);
+            margin-bottom: 25px;
+        }
+
+        .project-card h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: var(--text);
+            line-height: 28px;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            text-align: center;
+        }
+
+        .contact-box p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--text);
+            line-height: 32px;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .social-row a {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
+        }
+
+        .social-row a:hover {
+            background: var(--gradient);
+            transform: translateY(-8px) rotate(360deg);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* ANIMATION */
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 950px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 120px;
+            }
+
+            .btn-row {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                line-height: 70px;
+            }
+
+            .section-title {
+                font-size: 38px;
+            }
+
+            nav {
+                gap: 5px;
+            }
+
+            nav a {
+                padding: 8px 14px;
+                font-size: 14px;
+            }
+
+            .profile-card {
+                width: 290px;
+                height: 290px;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            section {
+                padding: 90px 6%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+                line-height: 58px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1 class="logo">Portfolio Demo</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <div class="tag">
+                Full Stack Developer
+            </div>
+
+            <h1>
+                Amelia 
+                <span class="gradient-text">Lowell</span>
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Harum repellendus laborum necessitatibus deserunt maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quia, animi.
+            </p>
+
+            <div class="btn-row">
+                <a href="#" class="btn btn-primary">
+                    View Projects
+                </a>
+
+                <a href="#" class="btn btn-secondary">
+                    Hire Me
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="profile-card">
+                <div class="profile-img"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section>
+
+        <div class="glass-card">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam, voluptas. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Error unde nobis accusamus adipisci
+                officiis molestias natus pariatur.
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora possimus aliquam doloremque asperiores quisquam
+                fugiat reiciendis exercitationem.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section>
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Frontend</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci officiis doloremque.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-server"></i>
+                <h3>Backend</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci officiis doloremque.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Cyber Security</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci officiis doloremque.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>UI / UX Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci officiis doloremque.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section>
+
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
+
+        <div class="project-grid">
+
+            <div class="glass-card project-card">
+
+                <div class="project-image"></div>
+
+                <h3>Demo</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloremque porro officiis.
+                </p>
+
+            </div>
+
+            <div class="glass-card project-card">
+
+                <div class="project-image"></div>
+
+                <h3>Demo</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloremque porro officiis.
+                </p>
+
+            </div>
+
+            <div class="glass-card project-card">
+
+                <div class="project-image"></div>
+
+                <h3>Demo</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloremque porro officiis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section>
+
+        <div class="glass-card contact-box">
+
+            <h2 class="section-title">
+                Contact <span>Me</span>
+            </h2>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione mollitia molestiae velit magni reprehenderit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <div class="social-row">
+
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Portfolio | Designed With love
+    </footer>
+
+</body>
+
+</html>
