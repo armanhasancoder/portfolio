@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===========================
+       BASIC SEO META TAGS
+  ============================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arman Hasan | Web Developer Portfolio</title>
+
+  <meta name="description"
+    content="Arman Hasan - Web Developer, Student, Graphic Designer. Skilled in HTML, CSS, JavaScript, UI Design, and Arduino projects." />
+  <meta name="keywords"
+    content="Arman Hasan, Portfolio, Web Developer, HTML, CSS, JavaScript, Graphic Designer, Arduino, Freelancer" />
+  <meta name="author" content="Arman Hasan" />
+
+  <!-- ===========================
+       OPEN GRAPH (SOCIAL PREVIEW)
+  ============================ -->
+  <meta property="og:title" content="Arman Hasan | Portfolio" />
+  <meta property="og:description"
+    content="Web Developer | Student | Graphic Designer. Explore my projects, skills, and services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="portfolio.png" />
+  <!-- <meta property="og:image" content="https://yourdomain.com/portfolio.png" /> -->
+  <meta property="og:site_name" content="Arman Hasan Portfolio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arman Hasan | Web Developer Portfolio" />
+  <meta name="twitter:description"
+    content="Web Developer | Student | Graphic Designer. Explore my projects and skills." />
+  <meta name="twitter:image" content="portfolio.png" />
+
+
+
+  <!-- ===========================
+       FONTS + ICONS
+  ============================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ===========================
+       CSS FILE
+  ============================ -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/" /> -->
+  <!-- <meta property="og:url" content="https://YOURUSERNAME.github.io/" /> -->
+  <!-- <meta name="twitter:url" content="https://YOURUSERNAME.github.io/" />  -->
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="arman portfolio" />
+  <link rel="manifest" href="/site.webmanifest" />
+</head>
+
+<body>
+  <!-- ===========================
+       HEADER
+  ============================ -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#home" class="logo">
+          <span>Arman Hasan</span>
+        </a>
+
+        <nav>
+          <ul id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- THEME SETTINGS -->
+          <div class="theme-settings" id="themeSettings">
+            <button class="settings-btn" id="settingsBtn" aria-label="Theme Settings">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+
+            <div class="theme-dropdown" id="themeDropdown">
+              <button class="theme-option" data-theme="dark">
+                <div class="theme-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+                  </svg>
+                  <span>Dark</span>
+                </div>
+              </button>
+
+              <button class="theme-option" data-theme="light">
+                <div class="theme-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414" />
+                    <circle cx="12" cy="12" r="4" stroke-width="2"></circle>
+                  </svg>
+                  <span>Light</span>
+                </div>
+              </button>
+
+              <button class="theme-option" data-theme="system">
+                <div class="theme-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9.75 17L9 21h6l-.75-4M4 4h16v11H4V4z" />
+                  </svg>
+                  <span>System</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#home" class="m-link">Home</a></li>
+          <li><a href="#about" class="m-link">About</a></li>
+          <li><a href="#skills" class="m-link">Skills</a></li>
+          <li><a href="#services" class="m-link">Services</a></li>
+          <li><a href="#projects" class="m-link">Projects</a></li>
+          <li><a href="#contact" class="m-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===========================
+       MAIN CONTENT
+  ============================ -->
+  <main>
+    <!-- ===========================
+         HERO
+    ============================ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- LEFT SIDE -->
+          <div class="hero-left reveal">
+            <p class="hero-topline">Hi, I’m</p>
+
+            <h1 class="hero-title">
+              <span class="gradient-text">Arman Hasan</span>
+            </h1>
+
+            <p class="hero-role">
+              Front-End <span class="hero-role-gradient">Web Developer</span>
+            </p>
+
+            <p class="hero-subtitle">
+              I build modern, responsive, and high-performance websites with a clean, professional UI. Passionate about
+              web development, creative design, and building real-world tech projects.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-outline">Contact</a>
+              <a href="temp.html" target="_self" class="btn btn-outline">View CV</a>
+            </div>
+
+            <div class="hero-social">
+              <a href="https://github.com/armanhasancoder" target="_blank" class="social-icon" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/armancoder/" target="_blank" class="social-icon"
+                aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a href="https://www.instagram.com/arman_hasan.coder" target="_blank" class="social-icon"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="temp.html" target="_self" class="social-icon" aria-label="facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="hero-right reveal">
+            <div class="hero-photo-wrap">
+
+              <img src="photo.jpeg" alt="Arman Hasan" class="hero-photo">
+
+              <div class="hero-photo-placeholder">
+                photo.jpg
+              </div>
+
+              <div class="hero-glow"></div>
+            </div>
+
+            <p class="hero-typewriter">
+              <span id="typewriterText"></span><span class="cursor">|</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="divider"></div>
+
+    <!-- ===========================
+         ABOUT
+    ============================ -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">
+            A short introduction about my background, skills, mindset, and what I love building.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <div class="about-text">
+              <p>
+                Hi, I’m <span class="highlight">Arman Hasan</span>, a 16-year-old student currently studying in
+                <span class="highlight">Class 11 (PCM + Computer Science, 2026)</span>. I’m a passionate Web Developer
+                who enjoys learning new technologies and exploring the world of computers and coding.
+              </p>
+
+              <p>
+                I have strong skills in <span class="highlight">HTML, CSS, and JavaScript</span> for modern website
+                development,
+                along with hands-on experience using tools like
+                <span class="highlight">VS Code, Photoshop, Illustrator, Microsoft 365 and Canva</span>.
+                I also have a deep interest in Physics and enjoy understanding technical concepts in detail.
+              </p>
+
+              <p>
+                I work as a freelancer in web development and love building creative, real-world projects.
+                Along with web development, I enjoy working on electronics-based projects, especially
+                <span class="highlight">Arduino Uno robotics</span> and microcontroller programming.
+              </p>
+
+              <p>
+                I’m also an <span class="highlight">NCC pass-out</span>, which has helped me build discipline,
+                leadership skills, and confidence. Outside of coding, I stay active by going to the gym
+                and continuously focus on improving myself and my skills.
+              </p>
+            </div>
+          </div>
+
+          <div class="quick-facts reveal">
+            <div class="fact">
+              <h4><i class="fa-solid fa-code"></i> Web Development</h4>
+              <p>I build modern responsive websites using HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="fact">
+              <h4><i class="fa-solid fa-pen-nib"></i> Graphic Design</h4>
+              <p>I create logos, posters, banners, and resume designs using Photoshop, Illustrator, and Canva.</p>
+            </div>
+
+            <div class="fact">
+              <h4><i class="fa-brands fa-microsoft"></i> Microsoft 365</h4>
+              <p>Proficient in Microsoft Office, including Word, Excel, and PowerPoint, with strong skills in creating
+                professional documents, spreadsheets, and presentations.</p>
+            </div>
+
+            <div class="fact">
+              <h4><i class="fa-solid fa-shield-halved"></i> NCC + Discipline</h4>
+              <p>NCC experience improved my leadership skills, discipline, and confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===========================
+         SKILLS
+    ============================ -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-desc">
+            These are the technologies and tools I use to build modern websites, design clean interfaces, and create
+            professional digital content.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+              <h4>HTML5</h4>
+            </div>
+            <p class="skill-desc">
+              Writing clean, semantic, and well-structured HTML for SEO-friendly websites with accessibility,
+              performance, and responsive layouts in mind.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+              <h4>CSS3</h4>
+            </div>
+            <p class="skill-desc">
+              Building modern, responsive UI designs using Flexbox, Grid, animations, transitions, and advanced styling
+              techniques for a premium user experience.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+              <h4>JavaScript</h4>
+            </div>
+            <p class="skill-desc">
+              Creating interactive and dynamic web experiences using DOM manipulation, event handling, smooth UI logic,
+              and clean scripting for real-world websites.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h4>DIY Electronics & Prototyping</h4>
+            </div>
+            <p class="skill-desc">
+              I enjoy building DIY projects and creative prototypes using cardboard, soldering tools, hot glue, and
+              Fevikwik. I like experimenting with electrical devices and creating functional models with a hands-on
+              approach.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-solid fa-image"></i></div>
+              <h4>Photoshop</h4>
+            </div>
+            <p class="skill-desc">
+              Professional photo editing and creative design work including banners, posters, thumbnails, social media
+              creatives, and high-quality branding assets.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+              <h4>Illustrator</h4>
+            </div>
+            <p class="skill-desc">
+              Creating clean vector designs including logos, icons, illustrations, and scalable professional graphics
+              with precision and a modern design approach.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+              <h4>Canva</h4>
+            </div>
+            <p class="skill-desc">
+              Designing quick and professional content such as resumes, presentations, posters, and social media posts
+              with clean layouts and consistent branding.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+              <h4>VS Code</h4>
+            </div>
+            <p class="skill-desc">
+              Using VS Code for efficient development with extensions, debugging, clean code structure, and an optimized
+              workflow for faster and better coding.
+            </p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="fa-brands fa-microsoft"></i></div>
+              <h4>Microsoft Office</h4>
+            </div>
+            <p class="skill-desc">
+              Skilled in Word, Excel, and PowerPoint for creating professional documents, structured spreadsheets, and
+              clean presentations with a premium look.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===========================
+         SERVICES
+    ============================ -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Services</h2>
+          <p class="section-desc">
+            I provide professional web development and graphic design services for individuals and businesses.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <h4>Custom Website Development</h4>
+            <p>I design and develop fully custom websites based on your business needs and goals.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4>Template-Based Websites</h4>
+            <p>I provide ready-made and custom templates for fast delivery and modern design.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4>Landing Page Design</h4>
+            <p>High-converting landing pages for businesses, personal brands, and product launches.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4>Portfolio Websites</h4>
+            <p>I create professional portfolio websites for students, freelancers, and creators.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4>Logo & Branding</h4>
+            <p>Modern logos, branding designs, banners, posters, and business creatives.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <h4>Resume / CV Design</h4>
+            <p>Professional resume and CV design with a clean modern look for job and internship applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===========================
+         PROJECTS
+    ============================ -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-desc">
+            A collection of my websites, games, software, and electronics-based projects.
+            I keep adding more projects as I build new things.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card reveal">
+            <img src="/projects/project_1/Project_1.png" alt="Portfolio Website Project Screenshot" class="project-img">
+
+            <div class="project-overlay">
+              <h3 class="project-title">Portfolio</h3>
+              <p class="project-desc">
+                Dark-UI Portfolio with sleek neon gradients and glassmorphism effects.
+              </p>
+
+              <a href="/projects/project_1/project_1.html" class="project-btn" target="_blank">View Project</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+
+    <!-- ===========================
+         CONTACT
+    ============================ -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-desc">
+            Looking for a modern website or creative design work? Let’s connect and create something professional and
+            impactful.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Let’s Work Together</h3>
+            <p>
+              Have a project in mind? I’m available for freelance work and collaborations. Let’s connect and bring your
+              ideas to life.
+            </p>
+
+            <div class="contact-info">
+
+              <div class="contact-item">
+                <div class="c-left">
+                  <div class="c-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="c-text">
+                    <span>Email</span>
+                    <b>arman.hasan.coder@gmail.com</b>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="c-left">
+                  <div class="c-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="c-text">
+                    <span>Location</span>
+                    <b>India</b>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="c-left">
+                  <div class="c-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <div class="c-text">
+                    <span>Available For</span>
+                    <b>Freelance Work</b>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="contact-note">
+              You can also connect with me on LinkedIn for professional opportunities.
+            </p>
+
+
+            <div class="social-row contact-social">
+              <a href="https://github.com/armanhasancoder" target="_blank" class="social-icon" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/armancoder/" target="_blank" class="social-icon"
+                aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a href="https://www.instagram.com/arman_hasan.coder" target="_blank" class="social-icon"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="temp.html" target="_blank" class="social-icon" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card reveal">
+            <h3>Message Me</h3>
+            <p>
+              Send me a message directly. I will reply as soon as possible.
+            </p>
+
+            <form id="contactForm" action="https://formspree.io/f/xkoykvaw" method="POST" novalidate>
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="email" name="email" placeholder="Email Address" required />
+              <input type="tel" name="number" placeholder="Phone" required />
+              <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+              <button class="btn btn-primary" type="submit">Send Message</button>
+
+              <p id="formMsg" class="form-note"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="https://github.com/armanhasancoder" target="_blank" class="social-icon" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/armancoder/" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://www.instagram.com/arman_hasan.coder" target="_blank" class="social-icon" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="temp.html" target="_blank" class="social-icon" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </div>
+
+    <p class="footer-copy">
+      © <span id="year"></span> Arman Hasan. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <div class="to-top" id="toTopBtn" title="Back to top">↑</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
