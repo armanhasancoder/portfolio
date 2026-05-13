@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://armanhasancoder.github.io/portfolio/sitemap.xml
