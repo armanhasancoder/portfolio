@@ -7,7 +7,7 @@ This file tracks updates and improvements made to my portfolio website over time
 - Added `README.md` to document project details.
 - Cleaned up extra spacing in `sitemap.xml`.
 
-## 2026-05-17
+## 2026-05-20
 - Add arman-hasan-profile-v2.webp.
 - Rename photo.jpeg to arman-hasan-profile-v1.webp.
 - remove features comments from js file.
