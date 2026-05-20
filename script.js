@@ -1,16 +1,6 @@
 /* ===========================
    PORTFOLIO SCRIPT.JS
    Author: Arman Hasan
-   Features:
-   - Theme System (Dark / Light / System)
-   - Auto update on system theme change
-   - Mobile menu toggle + outside click close
-   - Active nav link on scroll
-   - Scroll reveal (optimized)
-   - Back to top button
-   - Typewriter effect
-   - Footer year update
-   - UI-only form prevention
 =========================== */
 
 document.addEventListener("DOMContentLoaded", () => {
