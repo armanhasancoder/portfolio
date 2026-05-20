@@ -1063,6 +1063,13 @@ textarea {
   color: rgba(255, 255, 255, 0.65);
 }
 
+.footer-update{
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.45;
+  letter-spacing: 0.4px;
+}
+
 /* ===========================
    REVEAL ANIMATION
 =========================== */

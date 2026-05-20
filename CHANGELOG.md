@@ -11,3 +11,5 @@ This file tracks updates and improvements made to my portfolio website over time
 - Add arman-hasan-profile-v2.webp.
 - Rename photo.jpeg to arman-hasan-profile-v1.webp.
 - remove features comments from js file.
+- Update css add footer-update.
+- Add last update on footer.
