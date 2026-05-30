@@ -17,5 +17,5 @@ This file tracks updates and improvements made to my portfolio website over time
 ## 2026-05-30
 - add a project clone series.
 - delete `project_2` blank file.
-- fix error edit clone-series location 
-- fix error edit clone-series location local to online 
+- fix error edit clone-series location.
+- fix error edit clone-series location local to online.
