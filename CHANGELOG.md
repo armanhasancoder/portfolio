@@ -13,3 +13,7 @@ This file tracks updates and improvements made to my portfolio website over time
 - remove features comments from js file.
 - Update css add footer-update.
 - Add last update on footer.
+
+## 2026-05-30
+- add a project clone series.
+- delete `project_2` blank file.
