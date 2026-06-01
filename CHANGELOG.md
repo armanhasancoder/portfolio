@@ -19,3 +19,6 @@ This file tracks updates and improvements made to my portfolio website over time
 - delete `project_2` blank file.
 - fix error edit clone-series location.
 - fix error edit clone-series location local to online.
+
+## 2026-06-01
+- add project 2 webclone library
