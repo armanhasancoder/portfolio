@@ -22,3 +22,4 @@ This file tracks updates and improvements made to my portfolio website over time
 
 ## 2026-06-01
 - add project 2 webclone library
+- update date in index footer
